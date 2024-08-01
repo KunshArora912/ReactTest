@@ -13,6 +13,8 @@ import EmailVerificationPage from "./pages/EmailVerification.jsx";
 
 // LAYOUTS
 import LoginLayout from "./layouts/LoginLayout";
+import HomePage from "./components/HomePage.jsx";
+import FallBack from "./components/FallBack.jsx";
 
 export const CurrentUserContext = createContext(null);
 
@@ -48,6 +50,8 @@ function App() {
         <Route path="login" element={<LoginLayout />}>
           <Route path="emailverification" element={<EmailVerificationPage />} />
         </Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="*" element={<FallBack />}></Route>
       </>
     )
   );
